@@ -12,14 +12,14 @@ public class Subsets {
 
     public static void backtrack(List<List<Integer>> result, List<Integer> current, int[] nums, int start) {
 
-        // Add the current subset
+       
         result.add(new ArrayList<>(current));
 
-        // Generate remaining subsets
+        
         for (int i = start; i < nums.length; i++) {
-            current.add(nums[i]);               // Choose
-            backtrack(result, current, nums, i + 1); // Explore
-            current.remove(current.size() - 1); // Backtrack
+            current.add(nums[i]);               
+            backtrack(result, current, nums, i + 1); 
+            current.remove(current.size() - 1); 
         }
     }
 
